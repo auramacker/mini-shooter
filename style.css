@@ -1,0 +1,92 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgb(157, 142, 135);
+  background-image: url(img/wall.png);
+  background-size: 10%;
+}
+#game-area {
+  width: 800px;
+  height: 700px;
+  margin: 0 auto;
+  /*background-color: rgb(157, 142, 135);*/
+  position: relative;
+  padding: 10px;
+}
+#player {
+  width: 49px;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 64px;
+  position: absolute;
+  background-position: 0px 0;
+  background-image: url(img/hero.png);
+  transition: all 0.3s;
+}
+/*#obj1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  left: 100px;
+  top: 200px;
+  bottom: 0px;
+  right: 0px;
+}*/
+.wall {
+  position: absolute;
+  background-image: url(img/box.png);
+  background-size: cover;
+  box-shadow: 0px 10px 91px rgba(0, 0, 0, 0.7);
+}
+.stayBottom{
+  background-image: url(img/standDown.png) !important;
+}
+.moveLeft {
+  animation: move-left 0.5s steps(4) infinite;
+
+}
+.moveRight {
+  animation: move-right 0.5s steps(4) infinite;
+}
+.moveUp {
+  animation: move-up 0.5s steps(4) infinite;
+}
+.moveDown {
+  animation: move-down 0.5s steps(4) infinite;
+}
+@keyframes move-left {
+  0% {
+    background-position: 151px -132px;
+  }
+  100% {
+    background-position: -45px -132px;
+  }
+}
+@keyframes move-right {
+  0% {
+    background-position: 151px -64px;
+  }
+  100% {
+    background-position: -45px -64px;
+  }
+}
+@keyframes move-up {
+  0% {
+    background-position: 148px 64px;
+  }
+  100% {
+    background-position: -44px 64px;
+  }
+}
+@keyframes move-down {
+  0% {
+    background-position: 148px 0px;
+  }
+  100% {
+    background-position: -44px 0px;
+  }
+}
